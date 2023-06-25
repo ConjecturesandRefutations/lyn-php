@@ -1,6 +1,31 @@
 
 <?php
 
+//connect to database
+$conn = mysqli_connect('localhost', 'universal', '12345', 'pearl-yoga');
+
+//check connection
+if($conn){
+  echo 'Connected! : ' . mysqli_connect_error();
+}
+
+//write query for all reviews
+$sql = 'SELECT title, rating, description FROM reviews';
+
+//make query and get result
+$result = mysqli_query($conn, $sql);
+
+//fetch the resulting rows as an array
+$reviews = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+//free result from memory
+mysqli_free_result($result);
+
+//close connection to database
+mysqli_close($conn);
+
+print_r($reviews);
+
 include('config/db_connect.php');
 
 $title = $rating = $description = '';
