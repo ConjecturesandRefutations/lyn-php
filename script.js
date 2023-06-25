@@ -10,12 +10,19 @@ $(document).ready(function(){
 
 /* JavaScript for Toggling the Rating Form */
 
-var toggleElement = document.querySelector('.toggle-form');
-toggleElement.addEventListener('click', function() {
-var form = document.querySelector('.toggler');
-form.classList.toggle('hide');
-});
+let toggleElement = document.querySelector('.form-header');
+let chevronElement = document.querySelector('#chevron');
+chevronElement.innerText = 'keyboard_arrow_down'
 
+toggleElement.addEventListener('click', function() {
+let form = document.querySelector('.toggler');
+form.classList.toggle('hide');
+if (form.classList.contains('hide')){
+    chevronElement.innerText = 'keyboard_arrow_down'
+} else {
+    chevronElement.innerText = 'keyboard_arrow_up'
+}
+});
 
 
 /* JavaScript for the Star Rating system */
