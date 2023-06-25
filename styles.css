@@ -1,0 +1,114 @@
+body{
+    overflow-x: none !important;
+}
+
+header{
+    background: url(./img/yogasunset.jpg);
+    background-size: cover;
+    background-position: left;
+    height: 750px;
+}
+.section{
+  padding-top: 4vh;
+  padding-bottom: 4vw;
+}
+.tabs .indicator{
+  background-color: #1a237e;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+  background: transparent;
+} 
+#title{
+  white-space: nowrap;
+}
+#openingQuote{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 275px;
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+}
+h2,h4,p{
+    color: rgb(104, 104, 104);
+}
+img{
+  border-radius: 5px;
+}
+#review{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+ .labels{
+  top: 40% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  height: 100% !important;
+} 
+.toggle-form{
+  cursor: pointer;
+}
+
+input, textarea{
+  text-align: center !important;
+}
+
+.rating{
+  text-align: left !important;
+}
+
+.reviews{
+  border-radius: 50% !important;
+  height: 150px !important;
+  width: 150px !important;
+  margin-left: 50% !important;
+  transform: translate(-50%) !important;
+}
+
+.starsTwo{
+  margin-left: 50% !important;
+  transform: translate(-50%) !important;
+  color: orange !important;
+}
+
+.stars {
+  font-size: 1.7rem;
+  white-space: nowrap;
+  margin-top: 10px !important;
+}
+.stars i {
+  color: lightgrey;
+  padding: 5px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+/* Dynamic Class */
+.color-star {
+  color: orange !important;
+}
+
+
+@media screen and (max-width: 670px){
+    header{
+        min-height: 500px;
+    }
+    #openingQuote{
+      margin-top: 200px;
+    }
+}
+
+@media screen and (max-width: 600px){
+  #openingQuote{
+    margin-top: 150px;
+  }
+}
+
+
+@media screen and (max-width: 300px){
+  #openingQuote{
+    margin-top: 100px;
+  }
+}
