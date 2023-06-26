@@ -63,8 +63,14 @@ if (isset($_POST['submit'])) {
 <div class="container">
     <h2 class="">Reviews</h2>
     <div class="row">
-        <?php foreach ($blogs as $blog): ?>
-        <div class="col s12 l6">
+        <?php 
+        function sort_by_id($a, $b) {
+            return $b['id'] - $a['id'];
+        }
+        
+        usort($blogs, 'sort_by_id');
+        foreach ($blogs as $blog): ?>
+        <div class="col s12">
             <div class="card">
                 <div class="card-image">
                     <img src="./img/hands.jpg" alt="review" class="reviews circle">

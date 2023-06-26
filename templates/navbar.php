@@ -8,8 +8,8 @@
             <ul class="right hide-on-med-and-down">
                 <li><a href="#what">What is it?</a></li>
                 <li><a href="#package">All Inclusive Package</a></li>
-                <li><a href="#contact">Contact</a></li>
                 <li><a href="#review">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href="https://www.instagram.com/indulgence_divine/" target="_blank" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="Instagram">
                   <i class="fab fa-instagram"></i>
                 </a></li>
@@ -23,8 +23,8 @@
             <ul class="sidenav grey light-2" id="mobile-menu">
                 <li><a href="#what">What is it?</a></li>
                 <li><a href="#package">All Inclusive Package</a></li>
-                <li><a href="#contact">Contact</a></li>
                 <li><a href="#review">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href="https://www.instagram.com/indulgence_divine/" target="_blank" class="tooltipped" data-tooltip="Instagram">
                   <i class="fab fa-instagram"></i>
                 </a></li>

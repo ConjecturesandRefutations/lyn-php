@@ -5,7 +5,7 @@
 include('config/db_connect.php');
 
 //write query from all blogs
-$sql = 'SELECT title, id, rating FROM blogs'; 
+$sql = 'SELECT title, id, rating, date FROM blogs ORDER BY `date` DESC';
 
 //make query and get result
 $result = mysqli_query($conn, $sql);
