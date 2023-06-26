@@ -9,3 +9,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script src="https://kit.fontawesome.com/81d73e8e4d.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
+
+  </body>

@@ -48,7 +48,7 @@ img{
   height: 100% !important;
 } 
 
-input, textarea{
+input, textarea, input[type="number"]{
   text-align: center !important;
 }
 

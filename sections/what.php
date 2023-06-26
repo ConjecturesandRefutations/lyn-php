@@ -1,4 +1,3 @@
-
 <section class="container section scrollspy" id="what">
     <div class="row">
       <div class="col s12 l4">
