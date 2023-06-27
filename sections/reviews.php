@@ -56,6 +56,49 @@ if (isset($_POST['submit'])) {
     }
 }
 
+//the code for deleting a post
+
+if(isset($_POST['delete'])){
+
+    $id_to_delete = mysqli_real_escape_string($conn, $_POST['id_to_delete']);
+    
+    $sql = "DELETE FROM blogs WHERE id = $id_to_delete";
+    
+    if(mysqli_query($conn, $sql)){
+        //success
+        echo '<script>
+                window.onload = function() {
+                    window.location.reload();
+                };
+              </script>';
+    }{
+        //failure
+        echo 'query error: ' . mysqli_error($conn);
+    }
+    
+    }
+    
+    //check GET request id parameter
+    if(isset($_GET['id'])){
+    
+    $id = mysqli_real_escape_string($conn, $_GET['id']);
+    
+        //make sql
+        $sql = "SELECT * FROM blogs WHERE id = $id";
+    
+        //get the query result
+        $result = mysqli_query($conn, $sql);
+    
+        //fetch result in array format
+        $blog = mysqli_fetch_assoc($result);
+    
+        mysqli_free_result($result);
+        mysqli_close($conn);
+
+        echo `<script>"location.reload()"</script>`;
+    
+    }
+
 ?>
 
 <section id="review" class="scrollspy grey lighten-4">
@@ -87,6 +130,11 @@ if (isset($_POST['submit'])) {
                     </div>
                     <span class="card-title"><?php echo htmlspecialchars($blog['title']); ?></span>
                     <p><?php echo htmlspecialchars($blog['content']); ?></p>
+                        <!-- delete form -->
+                <form action="index.php" method="POST" id="deleteForm" class="delete-form hide">
+                    <input type="hidden" name="id_to_delete" value="<?php echo $blog['id']; ?>">
+                    <input type="submit" name="delete" value="delete" id="deleteButton" class="btn brand z-depth-0">
+                </form>
                 </div>
             </div>
         </div>
@@ -131,8 +179,4 @@ if (isset($_POST['submit'])) {
 </section>
 
 
-<script>
-if ( window.history.replaceState ) {
-window.history.replaceState( null, null, window.location.href );
-}
-</script>
+<script src="reviewScript.js"></script>

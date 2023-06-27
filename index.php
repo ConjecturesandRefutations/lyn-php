@@ -1,7 +1,5 @@
 <?php
 
-
-
 include('config/db_connect.php');
 
 //write query from all blogs
@@ -28,7 +26,7 @@ mysqli_close($conn);
 
 <?php include('templates/navbar.php'); ?>
 
-<?php include('sections/what.php'); ?>
+<?php include('sections/what.html'); ?>
 
   <!-- parallax -->
 
